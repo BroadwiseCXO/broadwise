@@ -1,0 +1,30 @@
+{
+  "name": "broadwise",
+  "version": "1.0.0",
+  "description": "Project BroadWise backend",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "build": "cd client && npm install && ng build --prod"
+  },
+  "engines": {
+    "node": "^11.10.1",
+    "npm": "^6.7.0"
+  },
+  "dependencies": {
+    "express": "*",
+    "mongoose": "*",
+    "bcryptjs": "*",
+    "cors": "*",
+    "jsonwebtoken": "*",
+    "body-parser": "*",
+    "passport": "*",
+    "passport-jwt": "*",
+    "@angular/cli": "^7.3.8",
+    "lodash": "^4.17.10",
+    "passport-local": "^1.0.0",
+    "stripe": "^4.13.0"
+  },
+  "author": "Chockalingam Subramanian",
+  "license": "ISC"
+}
