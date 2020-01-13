@@ -50,24 +50,28 @@
       </div>
     </div-->
 
-      <div class="ring">
-          <h2>Agile Practice</h2>
+      <div class="categoryAgilePractices">
+          <h2>Agile Practices</h2>
           <hr>
-          <div *ngIf="products">
+          <!--div *ngIf="agilePractice"-->
             <div class="row ">
-              <div *ngFor="let product of products" class="col-md-4">
+              <div *ngFor="let agilePracticesCourse of agilePracticesCourses" class="col-md-4">
                 <div class="card mb-4 box-shadow ">
-                  <img class="card-img-top" src="{{product.img}}" alt="Card image cap">
+                  <!--img class="card-img-top" src="{{agilePracticesCourse.img}}" alt="Card image cap"-->
+                  
+                  <img class="card-img-top" src="../../assets/images/agileWork.jpg" alt="Card image cap">
+                  
+                
                   <div class="card-body">
-                    <h5 class="card-title">{{product.name}}</h5>
-                    <p class="card-text">{{product.description}}</p>
+                    <h5 class="card-title">{{agilePracticesCourse.courseName}}</h5>
+                    <p class="card-text">{{agilePracticesCourse.courseDescription}}</p>
                     
-                    <button type="button" *ngIf="authService.loggedIn()" class="btn btn-dark btn-lg btn-block" (click)="onNavigateToCourse(product)">Enrol</button>
+                    <button type="button" *ngIf="authService.loggedIn()" class="btn btn-dark btn-lg btn-block" (click)="onNavigateToCourse(agilePracticesCourse)">Enrol</button>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+          <!--/div-->
         </div>
 
 

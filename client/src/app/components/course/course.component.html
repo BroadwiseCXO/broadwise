@@ -5,10 +5,10 @@
       <hr>
       <div class="row ">
         <div *ngFor="let video of videos" class="col-md-4">
-          <p>{{video.moduleName}}</p>
-          <p>{{video.moduleDesc}}</p>
-          <p>{{video.moduleAuthor}}</p>
-          <div [innerHTML]="video.content | safe: 'html'"></div>
+          <p>{{video.cmoduleName}}</p>
+          <p>{{video.cmoduleDesc}}</p>
+          <p>{{video.cmoduleAuthor}}</p>
+          <div [innerHTML]="video.cmoduleURL | safe: 'html'"></div>
           
         </div>
       </div>

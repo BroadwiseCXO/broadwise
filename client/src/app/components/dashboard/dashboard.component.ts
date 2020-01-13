@@ -12,11 +12,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 })
 export class DashboardComponent implements OnInit {
   products: any;
-  rings: any = [];
-  ears: any = [];
-  necks: any = [];
-  pens: any = [];
-  bracs: any = [];
+  agilePracticesCourses: any;
+  // rings: any = [];
+  // ears: any = [];
+  // necks: any = [];
+  // pens: any = [];
+  // bracs: any = [];
   i: any;
 
   name: String;
@@ -79,7 +80,14 @@ export class DashboardComponent implements OnInit {
         
 
       // };
+this.authService.getCoursesByCourseCategory("Agile Practices").subscribe((data: any[]) =>{
+  
+  console.log("got this data");
+  console.log(data);
 
+  this.agilePracticesCourses = data;
+  
+  });
 
       this.products = [
              {
@@ -131,10 +139,11 @@ export class DashboardComponent implements OnInit {
   }
 
   
-  onNavigateToCourse(product){
+  onNavigateToCourse(course){
     
+    console.log(course.courseName);
 
-      localStorage.setItem("navigateToCourseTarget", product.name)
+      localStorage.setItem("navigateToCourseTarget", course.courseName)
 
       this.router.navigate(['course']);
 
@@ -143,6 +152,7 @@ export class DashboardComponent implements OnInit {
     // });
    
   }
+
 
 
 }

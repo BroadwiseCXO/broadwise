@@ -59,6 +59,39 @@ export class AuthService {
     .pipe(map(res => res.json()));
   }
 
+  getCmodulesByCourseName(courseName) {
+
+    console.log("reached auth service again");
+    console.log(courseName);
+
+    let headers = new Headers();
+
+    // console.log(courseName);
+    
+    // this.loadToken();
+
+    // headers.append('Authorization', this.authToken);
+    
+    headers.append('Content-Type', 'application/json');
+    return this.http.get(environment.apiBaseUrl + '/users/cmodulesByCourseName/' + courseName, courseName)
+    .pipe(map(res => res.json()));
+  }
+
+  
+  getCoursesByCourseCategory(courseCategory) {
+    let headers = new Headers();
+
+    // console.log(courseName);
+    
+    // this.loadToken();
+
+    // headers.append('Authorization', this.authToken);
+    
+    headers.append('Content-Type', 'application/json');
+    return this.http.get(environment.apiBaseUrl + '/users/coursesByCourseCategory/' + courseCategory, courseCategory)
+    .pipe(map(res => res.json()));
+  }
+
   getProfile() {
     let headers = new Headers();
     this.loadToken();

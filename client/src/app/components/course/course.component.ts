@@ -36,8 +36,10 @@ constructor(public authService: AuthService,
 
     this.course = localStorage.getItem("navigateToCourseTarget");
 
-this.authService.getIndividualCourseAllDetails(this.course).subscribe((data: any[]) =>{
+this.authService.getCmodulesByCourseName(this.course).subscribe((data: any[]) =>{
   
+
+
 this.videos = data;
 
 });

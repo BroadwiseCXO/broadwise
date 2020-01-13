@@ -6,6 +6,8 @@ const config = require('../config/database');
 const User = require('../models/user');
 const Product = require('../models/product');
 const Individualcourse = require('../models/individualcourse');
+const Course = require('../models/course');
+const Cmodule = require('../models/cmodule');
 
 // Register
 router.post('/register', (req, res, next) => {
@@ -87,6 +89,26 @@ router.get('/profile', passport.authenticate('jwt', {
 });
 
 
+router.get('/coursesByCourseCategory/:courseCategory', function(req, res, next){
+    
+  console.log("incoming request");
+  console.log(req.params.courseCategory);
+  
+  Course.find({courseCategory:req.params.courseCategory}, function(err, data){
+    if(err){
+        console.log(err);
+        return
+    }
+
+    if(data.length == 0) {
+        console.log("No record found")
+        return
+    }
+
+    res.send(data);
+})
+});
+
 
 router.get('/course/:courseName', function(req, res, next){
     
@@ -104,6 +126,47 @@ router.get('/course/:courseName', function(req, res, next){
     res.send(data);
 })
 });
+
+
+
+router.get('/cmodulesByCourseName/:courseName', function(req, res, next){
+    console.log("final step");
+    console.log(req.params.courseName);
+  Cmodule.find({courseName:req.params.courseName}, function(err, data){
+    if(err){
+        console.log(err);
+        return
+    }
+
+    if(data.length == 0) {
+        console.log("No record found")
+        return
+    }
+
+    console.log(data);
+
+    res.send(data);
+})
+});
+
+
+router.get('/cmodule/:cmoduleName', function(req, res, next){
+    
+  Cmodule.find({cmoduleName:req.params.cmoduleName}, function(err, data){
+    if(err){
+        console.log(err);
+        return
+    }
+
+    if(data.length == 0) {
+        console.log("No record found")
+        return
+    }
+
+    res.send(data);
+})
+});
+
 
 
 
