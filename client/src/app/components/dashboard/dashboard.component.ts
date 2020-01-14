@@ -13,6 +13,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 export class DashboardComponent implements OnInit {
   products: any;
   agilePracticesCourses: any;
+  businessAnalysisCourses: any;
   // rings: any = [];
   // ears: any = [];
   // necks: any = [];
@@ -88,6 +89,15 @@ this.authService.getCoursesByCourseCategory("Agile Practices").subscribe((data: 
   this.agilePracticesCourses = data;
   
   });
+
+  this.authService.getCoursesByCourseCategory("Business Analysis").subscribe((data: any[]) =>{
+  
+    console.log("got this data");
+    console.log(data);
+  
+    this.businessAnalysisCourses = data;
+    
+    });
 
       this.products = [
              {

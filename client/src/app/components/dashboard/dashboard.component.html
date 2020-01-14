@@ -74,25 +74,24 @@
           <!--/div-->
         </div>
 
-
+        businessAnalysisCourses
         
-      <div class="ring">
-        <h2>Agile Practice</h2>
+      <div class="categoryBusinessAnalysis">
+        <h2>Business Analysis</h2>
         <hr>
-        <div *ngIf="products">
+      
           <div class="row ">
-            <div *ngFor="let product of products" class="col-md-4">
+            <div *ngFor="let businessAnalysisCourse of businessAnalysisCourse" class="col-md-4">
               <div class="card mb-4 box-shadow ">
-                <img class="card-img-top" src="{{product.img}}" alt="Card image cap">
+                <!--img class="card-img-top" src="{{product.img}}" alt="Card image cap"-->
                 <div class="card-body">
-                  <h5 class="card-title">{{product.name}}</h5>
-                  <p class="card-text">{{product.description}}</p>
+                  <h5 class="card-title">{{businessAnalysisCourse.courseName}}</h5>
+                  <p class="card-text">{{businessAnalysisCourse.courseDescription}}</p>
                   
-                  <button type="button" *ngIf="authService.loggedIn()" class="btn btn-dark btn-lg btn-block" (click)="onAddProductToCart(product)">Enrol</button>
+                  <button type="button" *ngIf="authService.loggedIn()" class="btn btn-dark btn-lg btn-block" (click)="onNavigateToCourse(businessAnalysisCourse)">Enrol</button>
                 </div>
               </div>
             </div>
-          </div>
         </div>
       </div>
 
