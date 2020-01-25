@@ -9,7 +9,7 @@ import { FlashMessagesService } from "angular2-flash-messages";
 })
 export class LoginComponent implements OnInit {
 
-  username:String;
+  email:String;
   password:String;
   constructor(private authSerivce:AuthService,private router:Router,
   private flashMessage:FlashMessagesService) { }
@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit {
 
   onLoginSubmit(){
     const user={
-      username:this.username,
+      email:this.email,
       password:this.password
     } 
     this.authSerivce.authenticateUser(user).subscribe(data=>{

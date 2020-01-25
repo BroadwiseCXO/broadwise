@@ -36,10 +36,13 @@ router.post('/register', (req, res, next) => {
 
 // Authenticate
 router.post('/authenticate', (req, res, next) => {
-  const username = req.body.username;
+  const email = req.body.email;
   const password = req.body.password;
 
-  User.getUserByUsername(username, (err, user) => {
+  console.log("RECEIVED");
+  console.log(req.body);
+
+  User.getUserByEmail(email, (err, user) => {
     if (err) throw err;
     if (!user) {
       return res.json({
