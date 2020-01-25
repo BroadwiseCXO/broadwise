@@ -1,6 +1,32 @@
-<div *ngIf="user">
-  <h2 class="page-header">
-    <strong>Name: </strong>{{user.name}}</h2>
-  <h2 class="page-header">
-    <strong>Email: </strong>{{user.email}}</h2>
+<div class="container">
+
+  <h1>User Profile</h1>
+
+  <h2>{{profile.name}}</h2>
+  
+  <img src="../../../assets/images/single_user.png" alt="profile-picture" border="0" />
+  
+  <h3>{{profile.email}}</h3>
+  
+  <h4>{{profile.location}}</h4>
+  
+  <!--div class="listFlex">
+     <div>
+        <ul>
+           <li>PHP</li>
+           <li>HTML</li>
+           <li>CSS</li>
+        </ul>
+     </div>
+     <div>
+        <ul>
+           <li>JavaScript</li>
+           <li>JQuery</li>
+           <li>C#</li>
+        </ul>
+     </div>
+  </div-->
+
+  <button onclick=navigateToEditProfile(); id="buttonToEdit" class="buttonToEdit" >Edit Profile</button>
+
 </div>

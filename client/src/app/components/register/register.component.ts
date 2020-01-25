@@ -15,6 +15,7 @@ export class RegisterComponent implements OnInit {
   email: String;
   password: String;
   role:String;
+  //location:String;
 
   constructor(private validateService: ValidateService, private flashMessage:FlashMessagesService,
     private authservice:AuthService,
@@ -32,6 +33,13 @@ export class RegisterComponent implements OnInit {
       role: 'users'
     }
 
+    // const profile = {
+    //   name: this.name,
+    //   email: this.email,
+    //   username: this.username,
+    // location: this.location
+    // }
+
     // Required Fields
     if(!this.validateService.validateRegister(user)){
       this.flashMessage.show('Please fill in all fields', {cssClass: 'alert-danger', timeout: 3000});
@@ -47,9 +55,19 @@ export class RegisterComponent implements OnInit {
     this.authservice.registerUser(user).subscribe(data=>{
       if(data.success){
         this.flashMessage.show('Successfully Registered', { cssClass: 'alert-success', timeout: 3000 });
-        this.router.navigate(['/login']);
+      //  this.router.navigate(['/login']);
       }else{
         this.flashMessage.show('Something went wrong', { cssClass: 'alert-danger', timeout: 3000 });
+       // this.router.navigate(['/register']);
+      }
+    });
+
+    this.authservice.addProfile(user).subscribe(data=>{
+      if(data.success){
+       // this.flashMessage.show('Successfully Registered', { cssClass: 'alert-success', timeout: 3000 });
+        this.router.navigate(['/login']);
+      }else{
+       // this.flashMessage.show('Something went wrong', { cssClass: 'alert-danger', timeout: 3000 });
         this.router.navigate(['/register']);
       }
     });

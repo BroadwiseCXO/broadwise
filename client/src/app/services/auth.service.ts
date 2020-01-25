@@ -29,6 +29,16 @@ export class AuthService {
     return this.http.post(environment.apiBaseUrl + '/users/register', user, { headers: headers })
       .pipe(map(res => res.json()));
   };
+
+  addProfile(user) {
+    console.log("Adding Profile");
+
+    let headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+    return this.http.post(environment.apiBaseUrl + '/users/addProfile', user, { headers: headers })
+      .pipe(map(res => res.json()));
+  };
+
   authenticateUser(user) {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
@@ -92,14 +102,16 @@ export class AuthService {
     .pipe(map(res => res.json()));
   }
 
-  getProfile() {
+  getProfile(email) {
     let headers = new Headers();
-    this.loadToken();
 
-    headers.append('Authorization', this.authToken);
+    console.log(email);
+
+    
     headers.append('Content-Type', 'application/json');
-    return this.http.get(environment.apiBaseUrl + '/users/profile', { headers: headers })
+    return this.http.get(environment.apiBaseUrl + '/users/profile/' + email, email)
     .pipe(map(res => res.json()));
+
   }
 
   // getPayment(paymentReferenceId) {

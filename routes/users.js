@@ -4,6 +4,7 @@ const passport = require('passport');
 const jwt = require('jsonwebtoken');
 const config = require('../config/database');
 const User = require('../models/user');
+const Profile = require('../models/profile');
 const Product = require('../models/product');
 const Individualcourse = require('../models/individualcourse');
 const Course = require('../models/course');
@@ -19,6 +20,16 @@ router.post('/register', (req, res, next) => {
     role: 'users'
   });
 
+  let newProfile = new Profile({
+    name: req.body.name,
+    email: req.body.email,
+    username: req.body.username,
+    location: "location is null"
+  });
+
+  console.log("new profile");
+  console.log(newProfile);
+  
   User.addUser(newUser, (err, user) => {
     if (err) {
       res.json({
@@ -26,12 +37,47 @@ router.post('/register', (req, res, next) => {
         msg: 'Failed to register user'
       });
     } else {
+      
+  // Profile.addProfile(newProfile, (err, user) => {
+  //   console.log("Profile added in toute1");
+  // });
       res.json({
         success: true,
         msg: 'User registered'
       });
     }
   });
+
+
+
+});
+
+
+router.post('/addProfile', (req, res, next) => {
+  
+  let newProfile = new Profile({
+    name: req.body.name,
+    email: req.body.email,
+    username: req.body.username,
+    location: "location is null"
+  });
+  
+  console.log(newProfile);
+
+  Profile.addProfile(newProfile, (err, user) => {
+    if (err) {
+      res.json({
+        success: false
+      });
+    } else {
+      
+      res.json({
+        success: true
+      });
+    }
+  });
+
+
 });
 
 // Authenticate
@@ -83,12 +129,37 @@ router.post('/authenticate', (req, res, next) => {
 });
 
 // Profile
-router.get('/profile', passport.authenticate('jwt', {
-  session: false
-}), (req, res, next) => {
-  res.json({
-    user: req.user
-  });
+// router.get('/profile', passport.authenticate('jwt', {
+//   session: false
+// }), (req, res, next) => {
+//   res.json({
+//     user: req.user
+//   });
+// });
+
+
+router.get('/profile/:email', function(req, res, next){
+
+  console.log("REquested coming in");
+  console.log(req.body);
+    
+ // Profile.getProfileByEmail({email:req.params.email}, function(err, data){
+  Profile.find({email:req.params.email}, function(err, data){
+   
+ if(err){
+        console.log(err);
+        return
+    }
+
+    if(data.length == 0) {
+        console.log("No record found")
+        return
+    }
+
+    console.log("Profile located");
+    console.log(data);
+    res.send(data);
+})
 });
 
 

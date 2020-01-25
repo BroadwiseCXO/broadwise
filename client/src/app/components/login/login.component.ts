@@ -22,6 +22,10 @@ export class LoginComponent implements OnInit {
       email:this.email,
       password:this.password
     } 
+    
+    localStorage.setItem("LoggedInUserEmail", this.email.toString());
+
+
     this.authSerivce.authenticateUser(user).subscribe(data=>{
       if (data.success) {
         this.authSerivce.storeUserData(data.token,data.user);
