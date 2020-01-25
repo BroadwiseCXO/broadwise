@@ -24,6 +24,7 @@
     "@angular/platform-browser-dynamic": "^6.0.0",
     "@angular/router": "^6.0.0",
     "@ng-bootstrap/ng-bootstrap": "^4.0.0",
+    "@types/node": "~8.9.4",
     "angular2-flash-message": "^1.0.2",
     "angular2-flash-messages": "^2.0.5",
     "angular2-jwt": "^0.2.3",
@@ -35,13 +36,13 @@
     "ng2-toastr": "^4.1.2",
     "ngx-bootstrap": "^2.0.2",
     "ngx-order-pipe": "^2.0.1",
+    "ngx-owl-carousel-o": "^2.0.3",
     "ngx-toastr": "^8.2.1",
     "rxjs": "^6.0.0",
     "rxjs-compat": "^6.5.3",
     "safe-pipe": "^0.3.0",
     "toastr": "^2.1.4",
-    "zone.js": "^0.8.26",
-    "@types/node": "~8.9.4"
+    "zone.js": "^0.8.26"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^0.13.8",

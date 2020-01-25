@@ -28,6 +28,8 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
 import { CollapseModule } from 'ngx-bootstrap';
 import { PaymentreceiptComponent } from './components/paymentreceipt/paymentreceipt.component';
 
+import { CarouselModule } from 'ngx-owl-carousel-o';
+
 //safe piping for videos to dynamically load in iframe
 import { SafePipe } from './components/course/safe.pipe';
 
@@ -65,6 +67,7 @@ const appRoutes: Routes =  [
   imports: [
     BrowserModule,
     FormsModule,
+    CarouselModule,
     HttpModule,
     RouterModule.forRoot(appRoutes),
     FlashMessagesModule.forRoot(),
