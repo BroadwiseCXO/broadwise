@@ -12,13 +12,16 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { HomeComponent } from './components/home/home.component';
+import { SupportComponent } from './components/support/support.component';
+import { AboutusComponent } from './components/aboutus/aboutus.component';
+import { OurframeworkComponent } from './components/ourframework/ourframework.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { CourseComponent } from './components/course/course.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr'; 
 import {ValidateService} from './services/validate.service';
-import {AuthService  } from "./services/auth.service";
+import {AuthService } from "./services/auth.service";
 import {FlashMessagesModule} from 'angular2-flash-messages';
 import { AuthGuard } from "./guards/auth.guard";
 import { AddProductComponent } from './components/add-product/add-product.component';
@@ -32,12 +35,17 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 
 //safe piping for videos to dynamically load in iframe
 import { SafePipe } from './components/course/safe.pipe';
+import { ContactusComponent } from './components/contactus/contactus.component';
 
 const appRoutes: Routes =  [
   {path:'', component: HomeComponent},
   {path:'register', component: RegisterComponent},
   {path:'login', component: LoginComponent},
   {path:'products', component: DashboardComponent},
+  {path:'aboutus', component: AboutusComponent},
+  {path:'contactus', component: ContactusComponent},
+  {path:'support', component: SupportComponent},
+  {path:'ourframework', component: OurframeworkComponent},
   { path: 'course', component: CourseComponent, canActivate: [AuthGuard]},
   { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard]},
   { path: 'addproduct', component: AddProductComponent, canActivate: [AuthGuard] },
@@ -62,6 +70,10 @@ const appRoutes: Routes =  [
     CheckoutComponent,
     PaymentreceiptComponent,
     CourseComponent,
+    AboutusComponent,
+    OurframeworkComponent,
+    ContactusComponent,
+    SupportComponent,
     SafePipe
   ],
   imports: [
