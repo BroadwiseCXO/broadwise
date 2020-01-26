@@ -50,23 +50,23 @@
       </div>
     </div-->
 
-      <div class="categoryAgilePractices">
-          <h2>Agile Practices</h2>
+      <div class="categoryAgileScrum">
+          <h2>Agile Scrum</h2>
           <hr>
           <!--div *ngIf="agilePractice"-->
             <div class="row ">
-              <div *ngFor="let agilePracticesCourse of agilePracticesCourses" class="col-md-4">
+              <div *ngFor="let agileScrumCourse of agileScrumCourses" class="col-md-4">
                 <div class="card mb-4 box-shadow ">
-                  <!--img class="card-img-top" src="{{agilePracticesCourse.img}}" alt="Card image cap"-->
+                  <!--img class="card-img-top" src="{{agileScrumCourse.img}}" alt="Card image cap"-->
                   
                   <img class="card-img-top" src="../../assets/images/agileWork.jpg" alt="Card image cap">
                   
                 
                   <div class="card-body">
-                    <h5 class="card-title">{{agilePracticesCourse.courseName}}</h5>
-                    <p class="card-text">{{agilePracticesCourse.courseDescription}}</p>
+                    <h5 class="card-title">{{agileScrumCourse.courseName}}</h5>
+                    <p class="card-text">{{agileScrumCourse.courseDescription}}</p>
                     
-                    <button type="button" *ngIf="authService.loggedIn()" class="btn btn-dark btn-lg btn-block" (click)="onNavigateToCourse(agilePracticesCourse)">Enrol</button>
+                    <button type="button" *ngIf="authService.loggedIn()" class="btn btn-dark btn-lg btn-block" (click)="onNavigateToCourse(agileScrumCourse)">Step In</button>
                   </div>
                 </div>
               </div>
@@ -74,12 +74,12 @@
           <!--/div-->
         </div>
 
-      <div class="categoryBusinessAnalysis">
-        <h2>Business Analysis</h2>
+      <div class="categoryDigitalBusinessAnalysis">
+        <h2>Digital Business Analysis</h2>
         <hr>
       
           <div class="row ">
-            <div *ngFor="let businessAnalysisCourse of businessAnalysisCourses" class="col-md-4">
+            <div *ngFor="let digitalBusinessAnalysisCourse of digitalBusinessAnalysisCourses" class="col-md-4">
               <div class="card mb-4 box-shadow ">
                 <!--img class="card-img-top" src="{{product.img}}" alt="Card image cap"-->
 
@@ -88,17 +88,114 @@
                   
                 
                 <div class="card-body">
-                  <h5 class="card-title">{{businessAnalysisCourse.courseName}}</h5>
-                  <p class="card-text">{{businessAnalysisCourse.courseDescription}}</p>
+                  <h5 class="card-title">{{digitalBusinessAnalysisCourse.courseName}}</h5>
+                  <p class="card-text">{{digitalBusinessAnalysisCourse.courseDescription}}</p>
                   
-                  <button type="button" *ngIf="authService.loggedIn()" class="btn btn-dark btn-lg btn-block" (click)="onNavigateToCourse(businessAnalysisCourse)">Enrol</button>
+                  <button type="button" *ngIf="authService.loggedIn()" class="btn btn-dark btn-lg btn-block" (click)="onNavigateToCourse(digitalBusinessAnalysisCourse)">Step In</button>
                 </div>
               </div>
             </div>
         </div>
       </div>
 
+      
+      <div class="categoryDigitalProductManagement">
+        <h2>Digital Product Management</h2>
+        <hr>
+      
+          <div class="row ">
+            <div *ngFor="let digitalProductManagementCourse of digitalProductManagementCourses" class="col-md-4">
+              <div class="card mb-4 box-shadow ">
+                <!--img class="card-img-top" src="{{product.img}}" alt="Card image cap"-->
 
+                  
+                <img class="card-img-top" src="../../assets/images/agileWork.jpg" alt="Card image cap">
+                  
+                
+                <div class="card-body">
+                  <h5 class="card-title">{{digitalProductManagementCourse.courseName}}</h5>
+                  <p class="card-text">{{digitalProductManagementCourse.courseDescription}}</p>
+                  
+                  <button type="button" *ngIf="authService.loggedIn()" class="btn btn-dark btn-lg btn-block" (click)="onNavigateToCourse(digitalProductManagementCourse)">Step In</button>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+
+      
+      <div class="categoryDigitalProductOwner">
+        <h2>Digital Product Owner</h2>
+        <hr>
+      
+          <div class="row ">
+            <div *ngFor="let digitalProductOwnerCourse of digitalProductOwnerCourses" class="col-md-4">
+              <div class="card mb-4 box-shadow ">
+                <!--img class="card-img-top" src="{{product.img}}" alt="Card image cap"-->
+
+                  
+                <img class="card-img-top" src="../../assets/images/agileWork.jpg" alt="Card image cap">
+                  
+                
+                <div class="card-body">
+                  <h5 class="card-title">{{digitalProductOwnerCourse.courseName}}</h5>
+                  <p class="card-text">{{digitalProductOwnerCourse.courseDescription}}</p>
+                  
+                  <button type="button" *ngIf="authService.loggedIn()" class="btn btn-dark btn-lg btn-block" (click)="onNavigateToCourse(digitalProductOwnerCourse)">Step In</button>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+
+      <div class="categoryDigitalProjectManagement">
+        <h2>Digital Project Management</h2>
+        <hr>
+      
+          <div class="row ">
+            <div *ngFor="let digitalProjectManagementCourse of digitalProjectManagementCourses" class="col-md-4">
+              <div class="card mb-4 box-shadow ">
+                <!--img class="card-img-top" src="{{product.img}}" alt="Card image cap"-->
+
+                  
+                <img class="card-img-top" src="../../assets/images/agileWork.jpg" alt="Card image cap">
+                  
+                
+                <div class="card-body">
+                  <h5 class="card-title">{{digitalProjectManagementCourse.courseName}}</h5>
+                  <p class="card-text">{{digitalProjectManagementCourse.courseDescription}}</p>
+                  
+                  <button type="button" *ngIf="authService.loggedIn()" class="btn btn-dark btn-lg btn-block" (click)="onNavigateToCourse(digitalProjectManagementCourse)">Step In</button>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+
+     
+      <div class="categoryDigitalTransformation">
+        <h2>Digital Transformation</h2>
+        <hr>
+      
+          <div class="row ">
+            <div *ngFor="let digitalTransformationCourse of digitalTransformationCourses" class="col-md-4">
+              <div class="card mb-4 box-shadow ">
+                <!--img class="card-img-top" src="{{product.img}}" alt="Card image cap"-->
+
+                  
+                <img class="card-img-top" src="../../assets/images/agileWork.jpg" alt="Card image cap">
+                  
+                
+                <div class="card-body">
+                  <h5 class="card-title">{{digitalTransformationCourse.courseName}}</h5>
+                  <p class="card-text">{{digitalTransformationCourse.courseDescription}}</p>
+                  
+                  <button type="button" *ngIf="authService.loggedIn()" class="btn btn-dark btn-lg btn-block" (click)="onNavigateToCourse(digitalTransformationCourse)">Step In</button>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
 
     <!--div class="ring">
       <h2>Course 1</h2>

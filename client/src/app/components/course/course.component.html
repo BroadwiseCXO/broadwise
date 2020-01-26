@@ -6,7 +6,7 @@
       <div class="row ">
         <div *ngFor="let video of videos" class="col-md-4">
           <p>{{video.cmoduleName}}</p>
-          <p>{{video.cmoduleDesc}}</p>
+          <p>{{video.cmoduleDescription}}</p>
           <p>{{video.cmoduleAuthor}}</p>
           <div [innerHTML]="video.cmoduleURL | safe: 'html'"></div>
           

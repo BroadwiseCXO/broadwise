@@ -12,8 +12,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 })
 export class DashboardComponent implements OnInit {
   products: any;
-  agilePracticesCourses: any;
-  businessAnalysisCourses: any;
+  agileScrumCourses: any;
+  digitalBusinessAnalysisCourses: any;
+  digitalProductManagementCourses: any;
+  digitalProductOwnerCourses: any;
+  digitalProjectManagementCourses: any;
+  digitalTransformationCourses: any;
   // rings: any = [];
   // ears: any = [];
   // necks: any = [];
@@ -81,23 +85,67 @@ export class DashboardComponent implements OnInit {
         
 
       // };
-this.authService.getCoursesByCourseCategory("Agile Practices").subscribe((data: any[]) =>{
+this.authService.getCoursesByCourseCategory("Agile Scrum").subscribe((data: any[]) =>{
   
   console.log("got this data");
   console.log(data);
 
-  this.agilePracticesCourses = data;
+  this.agileScrumCourses = data;
   
   });
 
-  this.authService.getCoursesByCourseCategory("Business Analysis").subscribe((data: any[]) =>{
+  this.authService.getCoursesByCourseCategory("Digital Business Analysis").subscribe((data: any[]) =>{
   
     console.log("got this data");
     console.log(data);
   
-    this.businessAnalysisCourses = data;
+    this.digitalBusinessAnalysisCourses = data;
     
     });
+
+    
+  this.authService.getCoursesByCourseCategory("Digital Product Management").subscribe((data: any[]) =>{
+  
+    console.log("got this data");
+    console.log(data);
+  
+    this.digitalProductManagementCourses = data;
+    
+    });
+
+    
+
+    
+    
+  this.authService.getCoursesByCourseCategory("Digital Product Owner").subscribe((data: any[]) =>{
+  
+    console.log("got this data");
+    console.log(data);
+  
+    this.digitalProductOwnerCourses = data;
+    
+    });
+
+    
+    
+  this.authService.getCoursesByCourseCategory("Digital Project Management").subscribe((data: any[]) =>{
+  
+    console.log("got this data");
+    console.log(data);
+  
+    this.digitalProjectManagementCourses = data;
+    
+    });
+
+  this.authService.getCoursesByCourseCategory("Digital Transformation").subscribe((data: any[]) =>{
+  
+    console.log("got this data");
+    console.log(data);
+  
+    this.digitalTransformationCourses = data;
+    
+    });
+
 
       this.products = [
              {
