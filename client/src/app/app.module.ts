@@ -37,6 +37,9 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import { SafePipe } from './components/course/safe.pipe';
 import { ContactusComponent } from './components/contactus/contactus.component';
 
+import { InlineEditComponent } from './components/inline-edit/inline-edit.component';
+
+
 const appRoutes: Routes =  [
   {path:'', component: HomeComponent},
   {path:'register', component: RegisterComponent},
@@ -74,6 +77,7 @@ const appRoutes: Routes =  [
     OurframeworkComponent,
     ContactusComponent,
     SupportComponent,
+    InlineEditComponent,
     SafePipe
   ],
   imports: [
