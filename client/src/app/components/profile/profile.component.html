@@ -7,7 +7,7 @@
 <div class="container">
 <h1>User Profile</h1>
 <h2>{{profile.name}}</h2>
-  <img (click)="navigateToEditPhoto()" src="../../../assets/images/single_user.png" alt="profile-picture" border="0" />
+  <img src="../../../assets/images/single_user.png" alt="profile-picture" border="0" />
   <h3>{{profile.email}}</h3>
 
 <div>
@@ -30,4 +30,8 @@
   <button (click)="navigateToEditProfile()" id="buttonToEdit" class="buttonToEdit" >Reset Password</button>
   
   <button (click)="navigateToEditProfile()" id="buttonToEdit" class="buttonToEdit" >Download My Receipts</button>
+
+  
+  <button (click)="navigateToEditProfile()" id="buttonToEdit" class="buttonToEdit" >Change Profile Pic</button>
+
 </div>

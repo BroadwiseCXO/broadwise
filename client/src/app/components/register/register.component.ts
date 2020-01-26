@@ -11,12 +11,10 @@ import { Router } from "@angular/router";
 })
 export class RegisterComponent implements OnInit {
   name: String;
-  username: String;
   email: String;
   password: String;
   role:String;
-  //location:String;
-
+ 
   constructor(private validateService: ValidateService, private flashMessage:FlashMessagesService,
     private authservice:AuthService,
   private router:Router) { }
@@ -28,7 +26,6 @@ export class RegisterComponent implements OnInit {
     const user = {
       name: this.name,
       email: this.email,
-      username: this.username,
       password: this.password,
       role: 'users'
     }

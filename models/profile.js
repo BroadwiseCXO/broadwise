@@ -17,6 +17,12 @@ const ProfileSchema = mongoose.Schema({
   location: {
     type: String,
     
+  },
+  dateOfBirth: {type: String,
+  },
+  mobile: {type: String,
+  },
+  occupation: {type: String,
   }
 });
 
@@ -41,3 +47,8 @@ module.exports.addProfile = function(newProfile, callback){
   newProfile.save(callback);
     
 }
+
+// module.exports.updateProfile = function(profileWithUpdates, callback){
+//   profileWithUpdates.update(callback);
+ 
+// }

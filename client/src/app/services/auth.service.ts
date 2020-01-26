@@ -21,6 +21,7 @@ export class AuthService {
   courseName: any;
   currentselection: any;
   paymentReferenceId: any;
+  profileWithUpdates: any;
 
   constructor(private http: Http) { }
   registerUser(user) {
@@ -36,6 +37,15 @@ export class AuthService {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
     return this.http.post(environment.apiBaseUrl + '/users/addProfile', user, { headers: headers })
+      .pipe(map(res => res.json()));
+  };
+
+  updateProfile(profileWithUpdates) {
+    console.log("Updating Profile");
+
+    let headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+    return this.http.put(environment.apiBaseUrl + '/users/updateProfile', profileWithUpdates, { headers: headers })
       .pipe(map(res => res.json()));
   };
 
