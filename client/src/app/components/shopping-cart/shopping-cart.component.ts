@@ -78,7 +78,7 @@ export class ShoppingCartComponent implements OnInit {
   addProduct15Days(){
 
     this.currentselection="15 Days Subscription";
-    this.total=15;
+    this.total=299;
     
     this.authService.storeTotal(this.total);
    

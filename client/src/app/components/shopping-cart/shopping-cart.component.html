@@ -1,8 +1,104 @@
+
+     
+
 <div class="container">
-<h4 class="justify-content-between align-items-center mb-3">
-  <span class="text-muted">Your cart</span>
-  <!--span class="badge badge-secondary badge-pill">{{totalitems}}</span-->
-</h4>
+
+  <p style="text-align: center;font-size: large;">
+
+    <b>Option 1 : Pay By Paypal</b>
+
+  </p>
+
+</div>
+
+<div class="container">
+  
+    <div class="row">
+      <div class="col-sm-12 col-md-10 col-md-offset-1">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th >Subscription</th>
+              <th class="text-center">Price</th>
+              <th>Pay By PayPal</th>
+              <th> </th>
+            </tr>
+          </thead>
+          <tbody>
+           
+  
+            <tr>
+              <td class="col-sm-8 col-md-6">
+                <div class="media">
+                  
+                  <div class="media-body">
+    
+                    <img src="../../../assets/images/rsz_paypal-100x100.jpg">
+        
+                    <b><h1 class="media-heading ">Onboarding Subscription</h1></b>
+                    <h4 class="media-heading ">This is a Basic Subscription and one-time payment</h4>
+                  </div>
+                </div>
+              </td>
+              <td class="col-sm-1 col-md-1 text-center">
+                <strong>£299</strong>
+              </td>
+              <td class="col-sm-1 col-md-1">
+            
+  <button onclick="window.location.href = 'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=NEJKD2KEN9KLC';">Pay By PayPal</button>
+
+              </td>
+            
+            </tr>
+  
+            <tr>
+              <td class="col-sm-8 col-md-6">
+                <div class="media">
+                  
+                  <div class="media-body">
+    
+                    <img src="../../../assets/images/rsz_paypal-100x100.jpg">
+
+                    <b><h1 class="media-heading ">30 Days Subscription</h1></b>
+                    <h4 class="media-heading ">This is a monthly renewal payment</h4>
+                  
+                  </div>
+                </div>
+              </td>
+              <td class="col-sm-1 col-md-1 text-center">
+                <strong>£30</strong>
+              </td>
+              <td class="col-sm-1 col-md-1">
+                 
+  <button onclick="window.location.href = 'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=NEJKD2KEN9KLC';">Pay By PayPal</button>
+
+              </td>
+             
+                            
+            </tr>
+  
+  
+        
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="container">
+
+    <p style="text-align: center;font-size: large;">
+  
+      <b>Option 2 : Pay By Credit/Debit Card</b>
+  
+    </p>
+  
+  </div>
+
+  
+<div class="container">
+
   <div class="row">
     <div class="col-sm-12 col-md-10 col-md-offset-1">
       <table class="table table-hover">
@@ -40,12 +136,14 @@
               <div class="media">
                 
                 <div class="media-body">
-                  <h4 class="media-heading ">15 Days Subscription</h4>
+      
+                  <b><h1 class="media-heading ">Onboarding Subscription</h1></b>
+                  <h4 class="media-heading ">This is a Basic Subscription and one-time payment</h4>
                 </div>
               </div>
             </td>
             <td class="col-sm-1 col-md-1 text-center">
-              <strong>$15</strong>
+              <strong>£299</strong>
             </td>
             <td class="col-sm-1 col-md-1">
               <button  class="btn btn-success btn-sm"(click)="addProduct15Days()">
@@ -64,12 +162,14 @@
               <div class="media">
                 
                 <div class="media-body">
-                  <h4 class="media-heading ">30 Days Subscription</h4>
+                  <b><h1 class="media-heading ">30 Days Subscription</h1></b>
+                  <h4 class="media-heading ">This is a monthly renewal payment</h4>
+                
                 </div>
               </div>
             </td>
             <td class="col-sm-1 col-md-1 text-center">
-              <strong>$30</strong>
+              <strong>£30</strong>
             </td>
             <td class="col-sm-1 col-md-1">
               <button  class="btn btn-success btn-sm"(click)="addProduct30Days()">
@@ -127,7 +227,7 @@
             </td>
             <td class="text-right">
               <h3>
-                <strong>${{total}}</strong>
+                <strong>£{{total}}</strong>
               </h3>
             </td>
           </tr>
@@ -157,11 +257,6 @@
   </div>
 </div>
 
-<div>
-
-      <button onclick="window.location.href = 'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=NEJKD2KEN9KLC';">Click Here for PayPal</button>
-
-    </div>
 
   
   
