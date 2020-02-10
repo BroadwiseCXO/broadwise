@@ -4,6 +4,7 @@ import { Router } from "@angular/router";
 import { FlashMessagesService } from 'angular2-flash-messages';
 
 
+
 @Component({
   selector: 'app-shopping-cart',
   templateUrl: './shopping-cart.component.html',
@@ -19,6 +20,7 @@ export class ShoppingCartComponent implements OnInit {
 
   constructor(public authService: AuthService,
     private router: Router, private flashMessage: FlashMessagesService) { }
+
 
   ngOnInit() {
    // this.items =this.authService.getOrderFromItems();
@@ -109,6 +111,8 @@ export class ShoppingCartComponent implements OnInit {
     // }
 
   }
+
+  
 
   
 
