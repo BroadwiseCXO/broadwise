@@ -67,7 +67,11 @@
                     <h5 class="card-title">{{agileScrumCourse.courseName}}</h5>
                     <p class="card-text">{{agileScrumCourse.courseDescription}}</p>
                     
-                    <button type="button" *ngIf="authService.loggedIn()" class="btn btn-dark btn-lg btn-block" (click)="onNavigateToCourse(agileScrumCourse)">Step In</button>
+                    <!--button type="button" *ngIf="authService.loggedIn()" class="btn btn-dark btn-lg btn-block" (click)="onNavigateToCourse(agileScrumCourse)">Step In</button-->
+                 
+                    <button type="button" *ngIf="authService.loggedIn()" class="btn-to-step-in btn-lg btn-block" (click)="onNavigateToCourse(agileScrumCourse)">Step In</button>
+                  
+                 
                   </div>
                 </div>
               </div>
@@ -92,7 +96,8 @@
                   <h5 class="card-title">{{digitalBusinessAnalysisCourse.courseName}}</h5>
                   <p class="card-text">{{digitalBusinessAnalysisCourse.courseDescription}}</p>
                   
-                  <button type="button" *ngIf="authService.loggedIn()" class="btn btn-dark btn-lg btn-block" (click)="onNavigateToCourse(digitalBusinessAnalysisCourse)">Step In</button>
+                  <button type="button" *ngIf="authService.loggedIn()" class="btn-to-step-in btn-lg btn-block" (click)="onNavigateToCourse(agileScrumCourse)">Step In</button>
+                  
                 </div>
               </div>
             </div>
@@ -117,7 +122,9 @@
                   <h5 class="card-title">{{digitalProductManagementCourse.courseName}}</h5>
                   <p class="card-text">{{digitalProductManagementCourse.courseDescription}}</p>
                   
-                  <button type="button" *ngIf="authService.loggedIn()" class="btn btn-dark btn-lg btn-block" (click)="onNavigateToCourse(digitalProductManagementCourse)">Step In</button>
+                  <button type="button" *ngIf="authService.loggedIn()" class="btn-to-step-in btn-lg btn-block" (click)="onNavigateToCourse(agileScrumCourse)">Step In</button>
+                    
+                
                 </div>
               </div>
             </div>
@@ -142,7 +149,10 @@
                   <h5 class="card-title">{{digitalProductOwnerCourse.courseName}}</h5>
                   <p class="card-text">{{digitalProductOwnerCourse.courseDescription}}</p>
                   
-                  <button type="button" *ngIf="authService.loggedIn()" class="btn btn-dark btn-lg btn-block" (click)="onNavigateToCourse(digitalProductOwnerCourse)">Step In</button>
+                  
+                  <button type="button" *ngIf="authService.loggedIn()" class="btn-to-step-in btn-lg btn-block" (click)="onNavigateToCourse(agileScrumCourse)">Step In</button>
+                  
+                
                 </div>
               </div>
             </div>
@@ -166,7 +176,9 @@
                   <h5 class="card-title">{{digitalProjectManagementCourse.courseName}}</h5>
                   <p class="card-text">{{digitalProjectManagementCourse.courseDescription}}</p>
                   
-                  <button type="button" *ngIf="authService.loggedIn()" class="btn btn-dark btn-lg btn-block" (click)="onNavigateToCourse(digitalProjectManagementCourse)">Step In</button>
+                  
+                  <button type="button" *ngIf="authService.loggedIn()" class="btn-to-step-in btn-lg btn-block" (click)="onNavigateToCourse(agileScrumCourse)">Step In</button>
+                  
                 </div>
               </div>
             </div>
@@ -191,7 +203,10 @@
                   <h5 class="card-title">{{digitalTransformationCourse.courseName}}</h5>
                   <p class="card-text">{{digitalTransformationCourse.courseDescription}}</p>
                   
-                  <button type="button" *ngIf="authService.loggedIn()" class="btn btn-dark btn-lg btn-block" (click)="onNavigateToCourse(digitalTransformationCourse)">Step In</button>
+                  
+                  <button type="button" *ngIf="authService.loggedIn()" class="btn-to-step-in btn-lg btn-block" (click)="onNavigateToCourse(agileScrumCourse)">Step In</button>
+                  
+                
                 </div>
               </div>
             </div>
