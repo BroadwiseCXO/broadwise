@@ -2,10 +2,294 @@
 
 .home-image{
   width:100%;
-  height: 50%;
+  height: auto;
   border-left: 0px;
   padding-left: 0px;
  }
+
+
+ .home-image .home-image-btn1{
+  position: absolute;
+  top: 25%;
+  left: 85%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: white;
+  color: black;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  height:80px;
+  width:80px;
+ }
+
+ .home-image .home-image-btn1:hover {
+  background-color: #229edf;
+}
+
+
+.home-image .home-image-btn2{
+  position: absolute;
+  top: 40%;
+  left: 85%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: white;
+  color: black;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  height:80px;
+  width:80px;
+ }
+
+ .home-image .home-image-btn2:hover {
+  background-color: #229edf;
+}
+
+
+.home-image .home-image-btn3{
+  position: absolute;
+  top: 55%;
+  left: 85%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: white;
+  color: black;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  height:80px;
+  width:80px;
+ }
+
+ .home-image .home-image-btn3:hover {
+  background-color: #229edf;
+}
+
+
+.home-image .home-image-btn4{
+  position: absolute;
+  top: 25%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: white;
+  color: black;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  height:80px;
+  width:80px;
+ }
+
+ .home-image .home-image-btn4:hover {
+  background-color: #229edf;
+}
+
+
+.home-image .home-image-btn5{
+  position: absolute;
+  top: 40%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: white;
+  color: black;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  height:80px;
+  width:80px;
+ }
+
+ .home-image .home-image-btn5:hover {
+  background-color: #229edf;
+}
+
+
+.home-image .home-image-btn6{
+  position: absolute;
+  top: 55%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: white;
+  color: black;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  height:80px;
+  width:80px;
+ }
+
+ .home-image .home-image-btn6:hover {
+  background-color: #229edf;
+}
+
+
+.home-image .home-image-btn7{
+  position: absolute;
+  top: 25%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: white;
+  color: black;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  height:80px;
+  width:80px;
+ }
+
+ .home-image .home-image-btn7:hover {
+  background-color: #229edf;
+}
+
+
+.home-image .home-image-btn8{
+  position: absolute;
+  top: 40%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: white;
+  color: black;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  height:80px;
+  width:80px;
+ }
+
+ .home-image .home-image-btn8:hover {
+  background-color: #229edf;
+}
+
+
+.home-image .home-image-btn9{
+  position: absolute;
+  top: 55%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: white;
+  color: black;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  height:80px;
+  width:80px;
+ }
+
+ .home-image .home-image-btn9:hover {
+  background-color: #229edf;
+}
+
+
+.home-image .home-image-btn10{
+  position: absolute;
+  top: 60%;
+  left: 22%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: white;
+  color: black;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  height:40px;
+  width:220px;
+  
+ }
+
+ .home-image .home-image-btn10:hover {
+  background-color: #229edf;
+}
+
+
+.home-image .home-image-btn11{
+  position: absolute;
+  top: 60%;
+  left: 8%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #229edf;
+  color: white;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  height:40px;
+  width:90px;
+ }
+
+ .home-image .home-image-btn11:hover {
+  background-color: blue;
+}
+
+.home-image .large-text{
+  position: absolute;
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  color: white;
+  max-width: 30%;
+  top: 20%;
+  left: 5%;
+}
+
+ 
+.home-image .small-text{
+  position: absolute;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  color: white;
+  max-width: 30%;
+  top: 45%;
+  left: 5%;
+
+}
+
+
+
+@media (max-width: 768px) {
+
+  .home-image .small-text{
+  display: none;
+  }
+  
+.home-image .large-text{
+  display: none;
+  
+}
+}
+
+
+
 
 .icon-bar a {
     width: 50px;
