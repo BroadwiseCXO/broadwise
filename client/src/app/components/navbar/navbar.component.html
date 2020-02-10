@@ -19,7 +19,7 @@
       <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
         <a class="nav-link" [routerLink]="['/']">
           <b><h2>
-          <img src="../../../assets/images/rsz_paypal-100x100.jpg"></h2></b>
+          <img src="../../../assets/images/rsz_1broadwise.jpg"></h2></b>
           <span></span>
         </a>
       </li>
@@ -30,35 +30,35 @@
       </li>
 
       <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
-        <a class="nav-link" [routerLink]="['/aboutus']">About Us</a>
+        <a class="nav-link" [routerLink]="['/aboutus']">ABOUT US</a>
       </li>
       <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
-        <a class="nav-link" [routerLink]="['/ourframework']">Our Framework</a>
+        <a class="nav-link" [routerLink]="['/ourframework']">FRAMEWORK</a>
       </li>
       <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
-        <a class="nav-link" [routerLink]="['/contactus']">Contact Us</a>
+        <a class="nav-link" [routerLink]="['/contactus']">CONTACT US</a>
       </li>
       <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
-        <a class="nav-link" [routerLink]="['/support']">Support</a>
+        <a class="nav-link" [routerLink]="['/support']">SUPPORT</a>
       </li>
 
       <li class="nav-item" *ngIf="authSerivce.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
-        <a class="nav-link" [routerLink]="['/products']">Courses </a>
+        <a class="nav-link" [routerLink]="['/products']">COURSES </a>
       </li>
       <li class="nav-item" *ngIf="authSerivce.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
-        <a class="nav-link" [routerLink]="['/profile']">My Profile </a>
+        <a class="nav-link" [routerLink]="['/profile']">MY PROFILE </a>
       </li>
       <li class="nav-item" *ngIf="authSerivce.loggedIn() && !authSerivce.userRole()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
-        <a class="nav-link" [routerLink]="['/cart']">Cart </a>
+        <a class="nav-link" [routerLink]="['/cart']">CART </a>
       </li>
       <li class="nav-item" *ngIf="!authSerivce.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
-        <a class="nav-link" [routerLink]="['/login']">Login </a>
+        <a class="nav-link" [routerLink]="['/login']">SIGN IN </a>
       </li>
       <li class="nav-item" *ngIf="!authSerivce.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
-        <a class="nav-link" [routerLink]="['/register']">Register</a>
+        <a class="nav-link" [routerLink]="['/register']">SIGN UP</a>
       </li>
       <li class="nav-item" *ngIf="authSerivce.loggedIn()">
-        <a class="nav-link" (click)="onLogoutClick()" href="#">Logout</a>
+        <a class="nav-link" (click)="onLogoutClick()" href="#">SIGN OUT</a>
       </li>
     </ul>
   </div>
