@@ -1,5 +1,13 @@
 .box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
 
+
+.footer{
+  width:100%;
+  height: auto;
+  border-left: 0px;
+  padding-left: 0px;
+ }
+
 .home-image{
   width:100%;
   height: auto;
